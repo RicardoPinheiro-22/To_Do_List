@@ -1,0 +1,359 @@
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1.5rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header .logo img{
+  width: 7rem;
+  height: 4rem;
+}
+
+.header .logo .line {
+  width: 0.1rem;
+  height: 4.5rem;
+  border: solid 1px rgb(29, 28, 28);
+}
+
+.header .logo .texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-top: 2rem;
+}
+
+.main .main-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main .main-left h1{
+  font-size: 7rem;
+  width: 50%;
+  line-height: 7rem;
+}
+
+.main .main-left span{
+  color: rgb(39, 179, 225);
+}
+
+.main .main-left p{
+  width: 70%;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.main .main-left button{
+  width: 10rem;
+  height: 3rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(92deg, rgb(39, 179, 255), rgb(0, 157, 255));
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+.main .main-right{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 12rem;
+}
+
+section .formulario {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+section .form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section .formulario .form-data{
+  width: 50%;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 64px 64px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+}
+
+form .form-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+form .form-control .titulo-tarefa, 
+form .form-control .tempo-tarefa {
+  display: flex;
+  flex-direction: column;
+}
+
+form .form-control .titulo-tarefa input,
+form .form-control .tempo-tarefa input {
+  width: 20rem;
+  height: 3rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+form .list-botao input {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(92deg, rgb(39, 179, 255), rgb(0, 157, 255));
+  cursor: pointer;
+  color: #fff;
+  font-weight: 600;
+}
+
+section .tarefas-listadas {
+  width: 50%;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .tarefas-listadas .teste{
+  width: 80%;
+  height: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 64px 64px rgba(0, 0, 0, 0.3);
+}
+
+/* ----- AQUI COMEÇA A RESPONSIVIDADE DO SITE ----- */
+
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+  .main .main-left h1 {
+    width: 70%;
+  }
+
+  section .formulario .form-data {
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+  .main .main-left h1 {
+    width: 70%;
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .main .main-left p{
+    width: 80%;
+    font-size: 0.8rem;
+  }
+
+  section .formulario .form-data,
+  section .teste {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 900px) and (orientation: portrait){
+  .main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    gap: 2rem;
+  }
+
+  .main .main-left {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .main .main-right img{
+    width: 35rem;
+  }
+
+  section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+
+  section .formulario .form-data {
+    width: 100%;
+  }
+
+  section .tarefas-listadas .teste {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait) {
+  .main .main-left h1{
+    font-size: 5rem;
+    width: 50%;
+    line-height: 5rem;
+  }
+
+  .main .main-left p{
+    width: 100%;
+  }
+
+  .main .main-left p{
+    font-size: 0.9rem;
+  }
+
+  .main .main-right img{
+    width: 20rem;
+  }
+
+  section .formulario,
+  section .tarefas-listadas {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 660px) and (orientation: portrait) {
+  .form-list h2{
+    font-size: 1rem;
+  }
+
+  .form-control label {
+    font-size: 0.8rem;
+  }
+
+  form .form-control .titulo-tarefa input,
+  form .form-control .tempo-tarefa input,
+  form .list-botao input {
+    width: 17rem;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .header .logo .texts h2{
+    font-size: 1.5rem;
+  }
+
+  .header .logo .texts p{
+    font-size: 0.9rem;
+  }
+
+  .main .main-left h1{
+    font-size: 5rem;
+    width: 60%;
+    line-height: 5rem;
+  }
+
+  .main .main-left p{
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 425px) and (orientation: portrait) {
+  .header .logo .texts h2{
+    font-size: 1rem;
+  }
+
+  .header .logo .texts p{
+    font-size: 0.7rem;
+  }
+
+  .main {
+    margin-top: 2rem;
+  }
+
+  .main .main-left h1{
+    font-size: 4.5rem;
+    width: 70%;
+    line-height: 4rem;
+  }
+
+  .main .main-left p{
+    font-size: 0.7rem;
+  }
+
+  section .formulario,
+  section .tarefas-listadas {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 376px) and (orientation: portrait) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 8rem;
+  }
+
+  .main .main-left h1{
+    font-size: 4rem;
+    width: 80%;
+    line-height: 4rem;
+  }
+
+  .main .main-left p{
+    font-size: 0.7rem;
+  }
+}
